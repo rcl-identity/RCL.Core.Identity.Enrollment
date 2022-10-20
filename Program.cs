@@ -6,7 +6,7 @@ using RCL.Core.Identity.Enrollment;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAdB2C"));
+    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
 
 builder.Services.AddOptions<EnrollmentOptions>().Bind(builder.Configuration.GetSection("Enrollment"));
 
