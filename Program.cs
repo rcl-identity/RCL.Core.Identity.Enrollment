@@ -1,14 +1,25 @@
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
-using RCL.Core.Identity.Enrollment;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
     .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
 
-builder.Services.AddOptions<EnrollmentOptions>().Bind(builder.Configuration.GetSection("Enrollment"));
+builder.Services.Configure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationScheme, options =>
+{
+    var previousOptions = options.Events.OnRedirectToIdentityProvider;
+    options.Events.OnRedirectToIdentityProvider = async context =>
+    {
+        await previousOptions(context);
+        context.ProtocolMessage.ResponseType = Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectResponseType.IdToken;
+    };
+});
+
+builder.Services.AddRCLCoreAuthTokenServices(options => builder.Configuration.Bind("AzureAd", options));
+builder.Services.AddRCLCoreIdentityGraphServices();
+builder.Services.AddRCLCoreIdentitySecurityGroupServices();
 
 builder.Services.AddRazorPages()
      .AddMicrosoftIdentityUI();
