@@ -1,12 +1,12 @@
 # Identity Enrollment Application
 
-The Identity Enrollment application will allow persons to register for a Digital ID.
+The Identity Enrollment Application will allow persons to register for a Digital ID.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Frcl-identity%2FRCL.Core.Identity.Enrollment%2Fmaster%2Fazuredeploy.json)
 
 # Docmentation
 
-Lean how to install the Identity Enrollment Application by reading the instructions in the [documentation](https://identity.docs.rclapp.com/enrollment.html).
+Learn how to install the Identity Enrollment Application by reading the instructions in the [documentation](https://identity.docs.rclapp.com/enrollment.html).
 
 # Contribute to this project
 
