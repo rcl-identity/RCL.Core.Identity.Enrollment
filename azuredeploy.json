@@ -90,7 +90,7 @@
                         "AzureAd:CallbackPath": "/signin-oidc",
                         "AzureAd:SignedOutCallbackPath": "/signout-callback-oidc",
                         "AzureAd:SignUpSignInPolicyId": "--todo--",
-                        "AzureAd:ResetPasswordPolicyId": "--todo--"
+                        "AzureAd:EditProfilePolicyId": "--todo--"
                     }
                 }
             ]
