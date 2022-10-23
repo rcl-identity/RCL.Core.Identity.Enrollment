@@ -67,9 +67,9 @@
                     "dependsOn": [
                         "[resourceId('Microsoft.Web/sites', parameters('appServiceName'))]"
                     ],
-                    "properties": {
-                        "packageUri": "https://github.com/rcl-identity/RCL.Core.Identity.Enrollment/releases/download/V1.0.0/enrollment.zip"
-                    }
+                  "properties": {
+                    "packageUri": "https://github.com/rcl-identity/RCL.Core.Identity.Enrollment/releases/download/V7.0.0/IdentityEnrollment.zip"
+                  }
                 },
                 {
                     "name": "appsettings",
