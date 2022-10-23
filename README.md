@@ -16,8 +16,8 @@ This section covers the process for contributing to the project.
 
 - Open an [issue](https://github.com/rcl-identity/RCL.Core.Identity.Enrollment/issues) describing what you want to do. Wait for approval before you invest much time.
 
-- Fork the repo of the **main** branch and create a new branch for your changes.
+- Fork the repo of the **master** branch and create a new branch for your changes.
 
-- Submit a PR to the **main** branch with your changes.
+- Submit a PR to the **master** branch with your changes.
 
 - Respond to PR feedback.
