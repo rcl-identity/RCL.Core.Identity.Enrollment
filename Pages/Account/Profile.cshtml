@@ -72,7 +72,7 @@
                 }
                 @if (!string.IsNullOrEmpty(Model?.UserData?.ObjectId))
                 {
-                    <div><strong>Id</strong></div>
+                    <div><strong>Digital ID</strong></div>
                     <div>@Html.DisplayFor(model => model.UserData.ObjectId)</div>
                 }
                 @if (Model?.UserData.DateCreated.ToShortDateString() != "1/1/0001")
